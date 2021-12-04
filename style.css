@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+:root {
+  --grayish: #8486a9;
+  --soft-red: #fb6087;
+  --white: #ffffff;
+  --dark-desaturated-blue: #343650;
+  --very-dark-blue: #1e1f29;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background: var(--very-dark-blue);
+  background-image: url('images/bg-stars.svg');
+}
+
+main {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+  color: var(--white);
+}
+
+.stopwatch-container {
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+
+  margin-top: 2rem;
+
+  color: var(--white);
+}
+
+.stopwatch-container div + div {
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.stopwatch-container div {
+  background: var(--dark-desaturated-blue);
+  color: var(--soft-red);
+
+  border-radius: 0.5rem;
+  height: 11rem;
+}
+
+.stopwatch-container span {
+  width: 5rem;
+
+  padding: 1rem;
+  font-size: 8rem;
+}
+
+.stopwatch-container span + p {
+  margin-top: 1.5rem;
+}
+
+.stopwatch-container div p {
+  color: var(--grayish);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 16.5rem;
+  background: url('images/pattern-hills.svg') no-repeat;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 2rem;
+}
+
+.social-networks div a img {
+  transition: 0.3s;
+}
+
+.social-networks div a img:hover {
+  transform: translateY(-5px);
+}
+
+.social-networks div + div {
+  margin-left: 2rem;
+}
+
+@media (max-width: 685px) {
+  main h1 {
+    font-size: 1rem;
+  }
+
+  .stopwatch-container div span {
+    font-size: 6.5rem;
+    padding: 0;
+  }
+
+  .stopwatch-container div {
+    height: 9rem;
+  }
+
+  .stopwatch-container div + div {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 504px) {
+  main {
+    height: 72vh;
+  }
+  footer {
+    height: 18.5rem;
+    background-size: cover;
+  }
+}
+
+.remove {
+  display: none;
+}
+
+.congratulations {
+  font-size: 2rem;
+  color: var(--soft-red);
+  width: 100%;
+  display: none;
+}
+
+.congratulations p {
+  padding: 2rem;
+}
+
+.congratulations.isVisibility {
+  display: block;
+}
