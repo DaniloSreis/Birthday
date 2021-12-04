@@ -2,7 +2,7 @@ import Countdown from './module.js'
 
 const newYear = new Date().getFullYear() + 1
 
-const birthday = new Countdown(`4 December ${newYear} 18:21:00 GMT-0300`)
+const birthday = new Countdown(`4 December ${newYear} 18:00:00 GMT-0300`)
 
 let section = document.querySelector('.stopwatch-container')
 let congratulations = document.querySelector('.congratulations')
