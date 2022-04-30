@@ -1,6 +1,6 @@
 import Countdown from './module.js'
 
-const newYear = new Date().getFullYear() + 1
+const newYear = new Date().getFullYear()
 
 const birthday = new Countdown(`4 December ${newYear} 18:00:00 GMT-0300`)
 
